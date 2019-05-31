@@ -6,7 +6,9 @@
     "recurseDepth": 50,
     "source": {
         "include": [
-            "./README.md"
+            "./README.md",
+            "./src/functions.js",
+            "./src/validations.js"
         ],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "((^|\\/|\\\\)_|node_modules)"

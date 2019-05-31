@@ -8,6 +8,10 @@ Funciones utiles para desarrollar un ecommerce en vtex
 npm install --save @fizzmod/utils
 ```
 
+## Peer Dependecies
+- [axios](https://github.com/axios/axios)
+- [@babel/runtime](https://babeljs.io/docs/en/babel-runtime)
+
 <a name="Utils"></a>
 
 ## Utils : <code>object</code>

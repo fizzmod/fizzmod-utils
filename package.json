@@ -1,7 +1,7 @@
 {
   "name": "@fizzmod/utils",
   "description": "Utitities functions and validations",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "devDependencies": {
@@ -28,8 +28,9 @@
     "test": "mocha",
     "coverage": "nyc npm run test",
     "coverage-report": "nyc --reporter=html npm test",
+    "prepack": "npm run build",
     "pretest": "npm run build",
-    "jsdoc": "jsdoc -c ./jsdoc.conf.json -r && google-chrome ./out/index.html"
+    "jsdoc": "jsdoc -c ./jsdoc.conf.json -r && google-chrome ./out/index.html",
   },
   "files": [
     "dist"

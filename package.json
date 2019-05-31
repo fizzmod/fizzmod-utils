@@ -1,7 +1,7 @@
 {
-  "name": "fizzmod-utils",
+  "name": "@fizzmod/utils",
   "description": "Utitities functions and validations",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "devDependencies": {

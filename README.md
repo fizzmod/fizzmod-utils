@@ -1,11 +1,11 @@
-# fizzmod-utils
+# @fizzmod/utils
 
 Funciones utiles para desarrollar un ecommerce en vtex
 
 ## Install
 
 ```bash
-npm install --save fizzmod-utils
+npm install --save @fizzmod/utils
 ```
 
 <a name="Utils"></a>

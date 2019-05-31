@@ -30,7 +30,7 @@
     "coverage-report": "nyc --reporter=html npm test",
     "prepack": "npm run build",
     "pretest": "npm run build",
-    "jsdoc": "jsdoc -c ./jsdoc.conf.json -r && google-chrome ./out/index.html",
+    "jsdoc": "jsdoc -c ./jsdoc.conf.json -r && google-chrome ./out/index.html"
   },
   "files": [
     "dist"

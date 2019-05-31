@@ -287,14 +287,14 @@ export const isGoogleMapLoaded = () => (
  * @returns {Promise}
 */
 export const getServerTime = async() => {
-	const response = await axios.get('/no-cache/HoraAtualServidor.aspx');
+	const { data } = await axios.get('/no-cache/HoraAtualServidor.aspx');
 
 	const monthBr = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
 
-	const time = response.match(/([0-9]+):([0-5][0-9]):([0-5][0-9])/)[0];
-	let day = parseInt(response.match(/[a-z]{3} ([0-9]{1,2})/)[1], 10);
-	let month = monthBr.indexOf(response.match(/[a-z]{3}/)[0]) + 1;
-	const year = parseInt(response.match(/[0-9]{4}/)[0], 10);
+	const time = data.match(/([0-9]+):([0-5][0-9]):([0-5][0-9])/)[0];
+	let day = parseInt(data.match(/[a-z]{3} ([0-9]{1,2})/)[1], 10);
+	let month = monthBr.indexOf(data.match(/[a-z]{3}/)[0]) + 1;
+	const year = parseInt(data.match(/[0-9]{4}/)[0], 10);
 
 	if(day < 10)
 		day = `0${day}`;

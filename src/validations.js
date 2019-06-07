@@ -2,18 +2,16 @@
 /** @namespace Utils */
 /** @namespace Utils.Validations */
 
-
 /**
  * @function isEmail
  * @description check if a string is a valid email
  * @memberof Utils.Validations
  * @param {string} email - string to check
  * @returns {boolean}
-*/
+ */
 // eslint-disable-next-line
 const emailRegex = /^[A-z0-9+_-]+(?:\.[A-z0-9+_-]+)*@(?:[A-z0-9](?:[A-z0-9-]*[A-z0-9])?\.)+[A-z0-9](?:[A-z0-9-]*[A-z0-9])?$/i;
 export const isEmail = email => emailRegex.test(email);
-
 
 /**
  * @function isURL
@@ -21,10 +19,9 @@ export const isEmail = email => emailRegex.test(email);
  * @memberof Utils.Validations
  * @param {string} URL - string to check
  * @returns {boolean}
-*/
-export const isURL = URL => (
-	/^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(URL) //eslint-disable-line
-);
+ */
+export const isURL = URL =>
+	/^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(URL); //eslint-disable-line
 
 
 /**
@@ -33,16 +30,15 @@ export const isURL = URL => (
  * @memberof Utils.Validations
  * @param {string} json - string to check
  * @returns {boolean}
-*/
-export const isJSON = (json) => {
+ */
+export const isJSON = json => {
 	try {
 		JSON.parse(json);
 		return true;
-	} catch(e) {
+	} catch (e) {
 		return false;
 	}
 };
-
 
 /**
  * @function isRUT
@@ -50,39 +46,37 @@ export const isJSON = (json) => {
  * @memberof Utils.Validations
  * @param {string} rut - The rut to validate
  * @returns {boolean}
-*/
-export const isRUT = (value) => {
+ */
+export const isRUT = value => {
 	let rut = value;
-	if(rut.indexOf('-') > -1) {
+	if (rut.indexOf('-') > -1) {
 		rut = rut.replace(/\./g, '').toUpperCase();
 		rut = rut.split('-');
 
-		if(rut.length === 2) {
+		if (rut.length === 2) {
 			const rutNum = rut[0];
 			const rutLast = rut[1];
 
-			if(rutLast.length < 3 && /[0-9kK]/g.test(rutLast)) {
+			if (rutLast.length < 3 && /[0-9kK]/g.test(rutLast)) {
 				let sum = 0;
 				let m = 2;
 
-				for(let i = (rutNum.length - 1); i >= 0; i -= 1) {
+				for (let i = rutNum.length - 1; i >= 0; i -= 1) {
 					sum += rutNum[i] * m;
-					m = (m === 7) ? 2 : m + 1;
+					m = m === 7 ? 2 : m + 1;
 				}
 
 				const mod = parseInt(sum / 11, 10);
-				const res = sum - (11 * mod);
+				const modMultiplyEleven = 11 * mod;
+				const res = sum - modMultiplyEleven;
 				let last = 11 - res;
 
-				if(last.toString().length > 2)
-					return false;
+				if (last.toString().length > 2) return false;
 
-				if(last === 11)
-					last = 0;
-				else if(last === 10)
-					last = 'K';
+				if (last === 11) last = 0;
+				else if (last === 10) last = 'K';
 
-				return (last === rutLast);
+				return last === rutLast;
 			}
 		}
 	}

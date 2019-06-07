@@ -1,16 +1,17 @@
 import babel from 'rollup-plugin-babel';
-import json from 'rollup-plugin-json'
+import json from 'rollup-plugin-json';
 import pkg from './package.json';
 
 export default [
+	// CommonJS (for Node) and ES module (for bundlers) build.
+	// (We could have three entries in the configuration array
+	// instead of two, but it's quicker to generate multiple
+	// builds from a single configuration where possible, using
+	// the `targets` option which can specify `dest` and `format`)
 	{
 		input: 'src/index.js',
-		output: [
-			{ file: pkg.main, format: 'cjs' },
-			{ file: pkg.module, format: 'es' }
-		],
+		output: [{ file: pkg.main, format: 'cjs' }, { file: pkg.module, format: 'es' }],
 		plugins: [
-			// so Rollup can find `ms`
 			json(),
 			babel({
 				babelrc: false,
